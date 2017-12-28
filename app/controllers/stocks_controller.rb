@@ -6,12 +6,12 @@ class StocksController < ApplicationController
       if @stock
         render partial: 'users/result'
       else
-        flash[:danger] = "You have enteder an incorrect symbol"
-        redirect_to my_portfolio_path
+        flash.now[:danger] = "You have enteder an incorrect symbol"
+        render partial: 'users/result'
       end
     else
-      flash[:danger] = "You have entered an empty search string"
-      redirect_to my_portfolio_path
+      flash.now[:danger] = "You have entered an empty search string"
+      render partial: 'users/result'
     end
   end
 
