@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :user_stocks, only: [:create,:destroy]
   get 'my_friends', to: 'users#my_friends'
   get 'search_friends', to: 'users#search'
+  post 'add_friend', to: 'users#add_friend'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
